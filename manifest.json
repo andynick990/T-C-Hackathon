@@ -1,0 +1,36 @@
+{
+  "name": "TC Helper",
+  "version": "1.0",
+  "description": "A chrome extension to help users better understand terms and conditions before agreeing to them.",
+  "permissions": ["activeTab", "declarativeContent", "storage", "<all_urls>", "tabs"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_title": "Click me to better understand these 'terms'.",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/get_started16.png",
+      "32": "images/get_started32.png",
+      "48": "images/get_started48.png",
+      "128": "images/get_started128.png"
+    }
+  },
+  "icons": {
+    "16": "images/get_started16.png",
+    "32": "images/get_started32.png",
+    "48": "images/get_started48.png",
+    "128": "images/get_started128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["background.css", "popup.css"],
+      "js": ["background.js", "popup.js"]
+    }
+  ],
+  "content_security_policy": "script-src 'self' https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js; object-src 'self'",
+
+  "manifest_version": 2
+}

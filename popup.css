@@ -1,0 +1,39 @@
+.extension-body {
+	width: 200px;
+	height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ext-button {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    display: inline-block;
+    font-size: 1em;
+    padding: 1em 2em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #ff0081;
+    color: #fff;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s;
+}
+
+.ext-button:hover {
+    box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+}
+
+.ext-button:focus {
+    outline: none!important;
+}
+
+.ext-button:active {
+    /* padding: 0.8em 1.6em; */
+    transform: scale(0.9);
+}
